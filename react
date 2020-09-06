@@ -3,8 +3,8 @@
 git clone git@github.com:monzoor/react-auto-template.git
 
 npx create-react-app new
-cp -a react-template/rootConfigs/. new
-cp -a react-template/template/. new/src
+cp -a react-auto-template/rootConfigs/. new
+cp -a react-auto-template/template/. new/src
 
 sed -i '' 's/react-scripts start/craco start/g' new/package.json
 sed -i '' 's/react-scripts build/craco build/g' new/package.json
@@ -14,7 +14,7 @@ sed -i '' 's/"eject": "react-scripts eject"/ /g' new/package.json
 sed -i '' 's/"eslintConfig"/insert\
 &/' new/package.json
 
-sed -i '' "/insert/r react-template/copyItems/jestAlias" new/package.json 
+sed -i '' "/insert/r react-auto-template/copyItems/jestAlias" new/package.json 
 
 sed -i '' 's/insert/ /g' new/package.json
 
