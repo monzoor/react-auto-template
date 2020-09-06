@@ -33,7 +33,6 @@ rm -rf new/.git
 mv new/.* .
 mv new/* .
 rm -rf new react-auto-template
-rm -rf .git
 
 rm -rf src/index.js.bak
 rm -rf package.json-e
