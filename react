@@ -1,0 +1,36 @@
+#!/bin/bash
+
+git clone git@github.com:Raremark/react-template.git
+
+
+npx create-react-app new
+cp -a react-template/rootConfigs/. new
+cp -a react-template/template/. new/src
+
+sed -i '' 's/react-scripts start/craco start/g' new/package.json
+sed -i '' 's/react-scripts build/craco build/g' new/package.json
+sed -i '' 's/"react-scripts test",/"craco test"/g' new/package.json
+sed -i '' 's/"eject": "react-scripts eject"/ /g' new/package.json
+
+sed -i '' 's/"eslintConfig"/insert\
+&/' new/package.json
+
+sed -i '' "/insert/r react-template/copyItems/jestAlias" new/package.json 
+
+sed -i '' 's/insert/ /g' new/package.json
+
+
+rm -rf new/src/App.css new/src/App.js new/src/App.test.js new/src/index.css new/src/logo.svg
+
+
+sed -i '' 's/import App from '\''.\/App'\''/import App from '\''.\/Core'\''/g' new/src/index.js
+sed -i '' 's/import '\''.\/index.css'\'';/ /g' new/src/index.js 
+
+rm -rf new/node_modules
+rm -rf new/.git
+mv new/.* .
+mv new/* .
+rm -rf new react-template
+rm -rf .git
+
+yarn add react-redux react-router-dom redux redux-devtools-extension redux-thunk i18next react-i18next bootstrap node-sass @craco/craco craco-alias
