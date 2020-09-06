@@ -29,7 +29,7 @@ rm -rf new/node_modules
 rm -rf new/.git
 mv new/.* .
 mv new/* .
-rm -rf new react-template
+rm -rf new react-auto-template
 rm -rf .git
 
 yarn add react-redux react-router-dom redux redux-devtools-extension redux-thunk i18next react-i18next bootstrap node-sass @craco/craco craco-alias
