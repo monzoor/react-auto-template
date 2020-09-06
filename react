@@ -6,10 +6,10 @@ npx create-react-app new
 cp -a react-auto-template/rootConfigs/. new
 cp -a react-auto-template/template/. new/src
 
-sed -i '' 's/react-scripts start/craco start/g' new/package.json
-sed -i '' 's/react-scripts build/craco build/g' new/package.json
-sed -i '' 's/"react-scripts test",/"craco test"/g' new/package.json
-sed -i '' 's/"eject": "react-scripts eject"/ /g' new/package.json
+sed -i.bak 's/react-scripts start/craco start/g' new/package.json
+sed -i.bak 's/react-scripts build/craco build/g' new/package.json
+sed -i.bak 's/"react-scripts test",/"craco test"/g' new/package.json
+sed -i.bak 's/"eject": "react-scripts eject"/ /g' new/package.json
 
 sed -i '' 's/"eslintConfig"/insert\
 &/' new/package.json
