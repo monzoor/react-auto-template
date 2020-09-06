@@ -33,4 +33,4 @@ rm -rf new react-auto-template
 rm -rf .git
 rm -rf package.json.bak
 
-npm -i react-redux react-router-dom redux redux-devtools-extension redux-thunk i18next react-i18next bootstrap node-sass @craco/craco craco-alias
+npm i react-redux react-router-dom redux redux-devtools-extension redux-thunk i18next react-i18next bootstrap node-sass @craco/craco craco-alias
