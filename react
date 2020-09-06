@@ -11,19 +11,19 @@ sed -i.bak 's/react-scripts build/craco build/g' new/package.json
 sed -i.bak 's/"react-scripts test",/"craco test"/g' new/package.json
 sed -i.bak 's/"eject": "react-scripts eject"/ /g' new/package.json
 
-sed -i '' 's/"eslintConfig"/insert\
+sed -i 's/"eslintConfig"/insert\
 &/' new/package.json
 
-sed -i '' "/insert/r react-auto-template/copyItems/jestAlias" new/package.json 
+sed -i '/insert/r react-auto-template/copyItems/jestAlias' new/package.json 
 
-sed -i '' 's/insert/ /g' new/package.json
+sed -i 's/insert/ /g' new/package.json
 
 
 rm -rf new/src/App.css new/src/App.js new/src/App.test.js new/src/index.css new/src/logo.svg
 
 
-sed -i '' 's/import App from '\''.\/App'\''/import App from '\''.\/Core'\''/g' new/src/index.js
-sed -i '' 's/import '\''.\/index.css'\'';/ /g' new/src/index.js 
+sed -i 's/import App from '\''.\/App'\''/import App from '\''.\/Core'\''/g' new/src/index.js
+sed -i 's/import '\''.\/index.css'\'';/ /g' new/src/index.js 
 
 rm -rf new/node_modules
 rm -rf new/.git
