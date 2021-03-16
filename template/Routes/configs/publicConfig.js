@@ -1,9 +1,9 @@
-import { PATHS } from '../../constants/url';
+import { PATHS } from "@constants/url";
 
-import Home from '../../Containers/Home';
-import Wow from '../../Containers/Wow';
+import Home from "@containers/Home";
+import Wow from "@containers/Wow";
 
-export default [
+const routes = [
   {
     path: PATHS.HOME,
     component: Home,
@@ -13,3 +13,5 @@ export default [
     component: Wow,
   },
 ];
+
+export default routes;
