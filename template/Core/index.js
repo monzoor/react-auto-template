@@ -1,11 +1,10 @@
-import React from 'react';
-import { Provider } from 'react-redux';
-import { BrowserRouter } from 'react-router-dom';
+import { Provider } from "react-redux";
+import { BrowserRouter } from "react-router-dom";
 
-import store from './Store';
-import '../styles/main.scss';
+import store from "./Store";
+import "../styles/main.scss";
 
-import BaseLayout from './Layout/Base';
+import BaseLayout from "./Layout/Base";
 
 const App = () => {
   return (

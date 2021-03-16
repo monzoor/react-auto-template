@@ -1,5 +1,4 @@
-import React from 'react';
-import Routes from '../../Routes';
+import Routes from "../../Routes";
 
 const BaseLayout = ({ children }) => {
   return (
