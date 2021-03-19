@@ -1,4 +1,4 @@
-import { PATHS } from "@constants/url";
+import { PATHS } from "@constants";
 
 import Home from "@containers/Home";
 import Wow from "@containers/Wow";
